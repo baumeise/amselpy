@@ -6,7 +6,7 @@ Clone this repository into your projects directory:
 ``` shell
 git clone git@github.com:moritzgvt/AmselPy.git
 ```
-Start coding:
+Start unsing it:
 ``` python
 # import library
 from amselpy import Amsel
