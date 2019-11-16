@@ -26,4 +26,4 @@ amsel.stop()
 For further information read the [documentation](https://moritzgvt.github.io/amsel/docs).
 
 ### License
-[MIT Licensed](https://github.com/moritzgvt/amselpy/blob/master/LICENSE) | Copyright 2019 © Moritz Gut (moritzgvt)
+[MIT License](https://github.com/moritzgvt/amselpy/blob/master/LICENSE) | Copyright 2019 © Moritz Gut (moritzgvt)
