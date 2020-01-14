@@ -14,8 +14,8 @@ from amselpy import Amsel
 # create instance
 amsel = Amsel()
 
-# set request adress
-amsel.use("192.168.0.100")
+# set adress
+amsel.use("<YOUR-AMSELS-IP>")
 
 # control movements
 amsel.forward()
