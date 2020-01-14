@@ -18,7 +18,7 @@ class Connection(object):
 
   # Return address
   def address(self):
-    print("Amsel CLI uses %s as IP" % self.local_address)
+    print("Amsel CLI uses %s as network address" % self.local_address)
     return amsel.local_address
 
   # Establish http connection to device
