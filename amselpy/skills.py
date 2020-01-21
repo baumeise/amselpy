@@ -8,23 +8,32 @@ class Skills():
     self.speed = newSpeed
     print("Amsel CLI uses now %s as default speed" % self.speed)
 
-  # Define movement functions
-  def forward(self, speed=self.speed):
-    endpoint = "/forward?speed=%s" % speed
-    response = self.get(endpoint)
-    print(response.status)
+  # Get the current default speed
+  def getSpeed(self, newSpeed):
+    return self.speed
+    print("Amsel CLI uses %s as default speed" % self.speed)
 
-  def backward(self, speed=self.speed):
+  # Define movement functions.for
+  def forward(self, speed=0):
+    if not speed: speed = self.speed
+    endpoint = "/forward?speed=%s" % speed
+    # response = self.get(endpoint)
+    print(endpoint)
+
+  def backward(self, speed=0):
+    if not speed: speed = self.speed
     endpoint = "/reverse?speed=%s" % speed
     response = self.get(endpoint)
     print(response.status)
 
-  def left(self, speed=self.speed):
+  def left(self, speed=0):
+    if not speed: speed = self.speed
     endpoint = "/left?speed=%s" % speed
     response = self.get(endpoint)
     print(response.status)
 
-  def right(self, speed=self.speed):
+  def right(self, speed=0):
+    if not speed: speed = self.speed
     endpoint = "/right?speed=%s" % speed
     response = self.get(endpoint)
     print(response.status)

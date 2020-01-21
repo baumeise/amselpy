@@ -4,8 +4,8 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="amselpy-pkg-moritzgvt", # Replace with your own username
-    version="0.0.1",
+    name="amselpy", # Replace with your own username
+    version="0.1.0",
     author="Moritz Gut",
     author_email="hello@moritzgut.de",
     description="Take control of you Amsel bot.",

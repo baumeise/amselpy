@@ -1,6 +1,6 @@
-import httplib
+import http.client
 
-class Connection(object):
+class Connection():
 
   def __init__(self, local_ip):
     self.local_ip = local_ip
@@ -19,7 +19,7 @@ class Connection(object):
   # Return address
   def address(self):
     print("Amsel CLI uses %s as network address" % self.local_address)
-    return amsel.local_address
+    return self.local_address
 
   # Establish http connection to device
   def enableHTTPConnection(self, ip):

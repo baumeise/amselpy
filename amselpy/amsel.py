@@ -1,4 +1,5 @@
-from Connection import Connection
+from .connection import Connection
+from .skills import Skills
 import time
 
 class Amsel(Connection, Skills):
@@ -10,4 +11,4 @@ class Amsel(Connection, Skills):
 
   # Standard return method
   def __str__(self):
-    return "A warm 'Griaß di!' from Amsel!"
+    return "A warm 'Griass di!' from Amsel!"
