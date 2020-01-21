@@ -1,12 +1,12 @@
-## AmselPy
-The python package for the Amsel learning robot
+# AmselPy
 
 ### Usage
-Clone this repository into your projects directory: 
-``` shell
-git clone git@github.com:baumeise/AmselPy.git
+Install package from pip:
+```sh
+python3 -m pip install --index-url https://test.pypi.org/simple/ --no-deps amselpy-pkg-moritzgvt
 ```
-Start unsing it:
+
+Use it in your project:
 ``` python
 # import library
 from amselpy import Amsel

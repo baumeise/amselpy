@@ -22,12 +22,12 @@ class Connection(object):
     return amsel.local_address
 
   # Establish http connection to device
-  def enableHTTPConnection(self):
-    return httplib.HTTPConnection(self.local_ip)
+  def enableHTTPConnection(self, ip):
+    return httplib.HTTPConnection(ip)
 
   # Perform get request and return status
   def get(self, path):
-    connection = self.enableHTTPConnection()
+    connection = self.enableHTTPConnection(self.local_ip)
     connection.request("HEAD", path)
     response = connection.getresponse()
     return response
