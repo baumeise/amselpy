@@ -17,8 +17,7 @@ class Skills():
   def forward(self, speed=0):
     if not speed: speed = self.speed
     endpoint = "/forward?speed=%s" % speed
-    # response = self.get(endpoint)
-    print(endpoint)
+    response = self.get(endpoint)
 
   def backward(self, speed=0):
     if not speed: speed = self.speed
