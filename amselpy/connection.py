@@ -23,7 +23,7 @@ class Connection():
 
   # Establish http connection to device
   def enableHTTPConnection(self, ip):
-    return httplib.HTTPConnection(ip)
+    return http.client.HTTPConnection(ip)
 
   # Perform get request and return status
   def get(self, path):
