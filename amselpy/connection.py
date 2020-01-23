@@ -21,6 +21,10 @@ class Connection():
     print("Amsel CLI uses %s as network address" % self.local_address)
     return self.local_address
 
+  # Log into network
+  def login(self, ssid, passphrase):
+    self.get("/login?ssid=" + ssid + "&pass=" + passphrase);
+
   # Establish http connection to device
   def enableHTTPConnection(self, ip):
     return http.client.HTTPConnection(ip)
