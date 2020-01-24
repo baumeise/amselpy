@@ -1,8 +1,8 @@
 from .connection import Connection
 from .skills import Skills
-import time
+from .utils import Utils
 
-class Amsel(Connection, Skills):
+class Amsel(Connection, Skills, Utils):
   
   # Constructor
   def __init__(self, local_ip="192.168.0.100"):

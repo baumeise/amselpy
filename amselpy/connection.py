@@ -28,10 +28,3 @@ class Connection():
   # Establish http connection to device
   def enableHTTPConnection(self, ip):
     return http.client.HTTPConnection(ip)
-
-  # Perform get request and return status
-  def get(self, path):
-    connection = self.enableHTTPConnection(self.local_ip)
-    connection.request("HEAD", path)
-    response = connection.getresponse()
-    return response

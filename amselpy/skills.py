@@ -1,17 +1,10 @@
+import time
+import random
+
 class Skills():
 
   def __init__(self, speed=100):
     self.speed = speed
-
-  # Set new default speed
-  def setSpeed(self, newSpeed):
-    self.speed = newSpeed
-    print("Amsel CLI uses now %s as default speed" % self.speed)
-
-  # Get the current default speed
-  def getSpeed(self, newSpeed):
-    return self.speed
-    print("Amsel CLI uses %s as default speed" % self.speed)
 
   # Define movement functions.for
   def forward(self, speed=0):
@@ -43,6 +36,24 @@ class Skills():
     response = self.get(endpoint)
     print(response.status)
 
-  # Set amsel to sleep for a certain amount of time
-  def sleep(self, duration=0):
-    time.sleep(duration)
+  # Infinite run with obsticle avoidance
+  def go(self, duration=-1, proximity=30):
+    start = time.time()
+    now = time.time()
+    try:
+      while (now - start) < duration or duration == -1:
+        self.forward(100)
+        obsticle = 1 if self.getDistance() < proximity else 0
+        if obsticle:
+          self.stop()
+          randomDirection = random.randint(0, 1)
+          randomDuration = random.random()*1
+          if randomDirection:
+            self.right()
+          else:
+            self.left()
+          self.sleep(randomDuration)
+          self.stop()
+        now = time.time()
+    except KeyboardInterrupt:
+      print "Wow what a run!"
