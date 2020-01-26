@@ -56,4 +56,4 @@ class Skills():
           self.stop()
         now = time.time()
     except KeyboardInterrupt:
-      print "Wow what a run!"
+      print("Wow what a run!")

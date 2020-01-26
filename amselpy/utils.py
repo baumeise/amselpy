@@ -5,7 +5,7 @@ class Utils():
   ## Setter
   # Set new default speed
   def setSpeed(self, newSpeed):
-    print "Amsel CLI used %s as default speed now it uses %s" % (self.speed, newSpeed)
+    print("Amsel CLI used %s as default speed now it uses %s") % (self.speed, newSpeed)
     self.speed = newSpeed
 
   ## Getter
