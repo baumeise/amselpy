@@ -3,7 +3,7 @@ import random
 
 class Skills():
 
-  def __init__(self, speed=100):
+  def __init__(self, speed):
     self.speed = speed
 
   # Define movement functions.for
@@ -11,27 +11,31 @@ class Skills():
     if not speed: speed = self.speed
     endpoint = "/forward?speed=%s" % speed
     response = self.get(endpoint)
+    return response.status_code
 
   def backward(self, speed=0):
     if not speed: speed = self.speed
     endpoint = "/reverse?speed=%s" % speed
     response = self.get(endpoint)
+    return response.status_code
 
   def left(self, speed=0):
     if not speed: speed = self.speed
     endpoint = "/left?speed=%s" % speed
     response = self.get(endpoint)
+    return response.status_code
 
   def right(self, speed=0):
     if not speed: speed = self.speed
     endpoint = "/right?speed=%s" % speed
     response = self.get(endpoint)
+    return response.status_code
 
   # Stop movement
   def stop(self):
     endpoint = "/stop"
     response = self.get(endpoint)
-    print(response.status_code)
+    return response.status_code
 
   # Infinite run with obsticle avoidance
   def go(self, speed=100, duration=-1, proximity=30):
@@ -65,3 +69,9 @@ class Skills():
     except KeyboardInterrupt:
       self.stop()
       print("Wow what a run!")
+
+  # Print a message to the display
+  def print(self, text):
+    endpoint = "/left?string=%s" % text
+    response = self.get(endpoint)
+    return response.status_code

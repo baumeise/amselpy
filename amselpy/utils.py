@@ -4,6 +4,11 @@ import requests
 class Utils():
 
   ## Setter
+  # Set IP
+  def use(self, newIP):
+    self.local_ip = newIP
+    print("Amsel CLI uses now %s for requests" % self.local_ip)
+
   # Set new default speed
   def setSpeed(self, newSpeed):
     print("Amsel CLI used %s as default speed now it uses %s") % (self.speed, newSpeed)
@@ -25,6 +30,16 @@ class Utils():
     path = "http://" + str(self.local_ip) + str(endpoint)
     response = requests.get(path)
     return response
+
+  # Return IP
+  def IP(self):
+    print("Amsel CLI uses %s as IP" % self.local_ip)
+    return self.local_ip
+
+  # Return address
+  def address(self):
+    print("Amsel CLI uses %s as network address" % self.local_address)
+    return self.local_address
 
   ## Helper
   # Set amsel to sleep for a certain amount of time
