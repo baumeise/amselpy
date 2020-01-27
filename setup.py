@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="amselpy", # Replace with your own username
-    version="0.1.4",
+    version="0.1.5",
     author="Moritz Gut",
     author_email="hello@moritzgut.de",
     description="Take control of you Amsel bot.",

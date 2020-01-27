@@ -1,4 +1,5 @@
 import time
+import requests
 
 class Utils():
 
@@ -17,13 +18,12 @@ class Utils():
   def getDistance(self):
     endpoint = "/distance"
     response = self.get(endpoint)
-    print(response.status)
+    return response.text
 
   # Perform get request and return status
-  def get(self, path):
-    connection = self.enableHTTPConnection(self.local_ip)
-    connection.request("HEAD", path)
-    response = connection.getresponse()
+  def get(self, endpoint):
+    path = "http://" + str(self.local_ip) + str(endpoint)
+    response = requests.get(path)
     return response
 
   ## Helper

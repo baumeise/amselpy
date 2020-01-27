@@ -1,5 +1,3 @@
-import http.client
-
 class Connection():
 
   def __init__(self, local_ip):
@@ -24,7 +22,3 @@ class Connection():
   # Log into network
   def login(self, ssid, passphrase):
     self.get("/login?ssid=" + ssid + "&pass=" + passphrase);
-
-  # Establish http connection to device
-  def enableHTTPConnection(self, ip):
-    return http.client.HTTPConnection(ip)
