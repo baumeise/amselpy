@@ -72,6 +72,6 @@ class Skills():
 
   # Print a message to the display
   def print(self, text):
-    endpoint = "/left?string=%s" % text
+    endpoint = "/print?string=%s" % text
     response = self.get(endpoint)
     return response.status_code
