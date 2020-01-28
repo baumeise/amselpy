@@ -75,3 +75,8 @@ class Skills():
     endpoint = "/print?string=%s" % text
     response = self.get(endpoint)
     return response.status_code
+
+  def clear(self):
+    endpoint = "/print?string="
+    response = self.get(endpoint)
+    return response.status_code
